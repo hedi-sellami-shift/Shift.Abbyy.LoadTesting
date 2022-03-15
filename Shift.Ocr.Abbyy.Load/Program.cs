@@ -26,7 +26,7 @@ namespace Shift.Ocr.Abbyy.Load
             {
                 requestHandlers[i] = new RequestHandler(i.ToString());
                 var task = requestHandlers[i].SendRequest($"{baseAdress}analyze",
-                    "C:\\Users\\hedi.sellami\\Desktop\\Shift.Ocr.Abbyy.Load\\BenchmarkDocuments");
+                    Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\..\\BenchmarkDocuments"));
                 tasks[i] = task;
             }
 
